@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: SpaceQuest;
+  src: url(./Fonts/SpaceQuest-yOY3.woff);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  background: #1C1F31;
+
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  --c-light: #f4f4f4;
+  --c-dark: #141414;
+  --c-grey: #343434;
+  --c-blue: rgb(10, 132, 255);
+  --f-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  --trans-ease-in-out: all 0.2s ease-in-out;
+  color: var(--c-light);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  inset: 50px;
+  font-family: var(--f-body);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/dario-bronnimann-hNQwIirOseE-unsplash.jpg) center no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: var(--c-light);
+  text-decoration: none;
+}
+
+/***** NAVBAR *****/
+
+.nav-item {
+  transition: var(--trans-ease-in-out);
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.nav-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.gh-icon {
+  font-size: 30px;
+}
+
+/***** End NAVBAR *****/
+
+/***** Main *****/
+#wrapper {
+  margin: 0 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: SpaceQuest, sans-serif;
+  margin-top: 20px;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+#stars {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+[type="tel"]:focus {
+  outline: none;
+}
+
+[type="tel"] {
+  margin-top: 50px;
+  border-radius: 999px;
+  border: 1px var(--c-light) solid;
+
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgba(217, 217, 217, 0.2);
+  font-family: var(--f-body);
+  min-width: 280px;
+}
+
+.btn-form {
+  font-size: 20px;
+  padding: 5px;
+  background-color: rgba(217, 217, 217, 0.2);
+  border: none;
+  transition: var(--trans-ease-in-out);
+  cursor: pointer;
+  font-family: var(--f-body);
+}
+
+.btn-form:hover {
+  background-color: rgba(217, 217, 217, 0.4);
+}
+
+.btn-form:first {
+  border-right: var(--c-light) 1px solid;
+}
+
+.input-group-text {
+  background-color: rgba(217, 217, 217, 0.2);
+  font-size: 17px;
+  padding: 7px;
+}
+
+/***** End Main *****/
+
+/***** CARDS *****/
+
+.card-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-items: center;
+  grid-gap: 10px;
+  width: calc(100vw - 200px);
+}
+
+
+.card {
+  background-color: #141414;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.planet-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet {
+  font-size: clamp(20px, 50px, 50px);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.planet-img {
+  width: 80px;
+  height: auto;
+  margin-right: 30px;
+  animation: rotate 7s linear infinite;
+}
+
+
+[src="./images/planets/Saturn.png"] {
+  height: 79.25px;
+  width: auto;
+}
+
+.weight {
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.weight::after {
+  content: ":";
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  margin: 20px 0;
+  background-color: var(--c-grey);
+}
+
+.value {
+  font-size: 60px;
+  color: var(--c-blue);
+}
+
+.dynamic>.value:nth-child(2) {
+  margin-left: 10px;
+}
+
+.dynamic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/***** End CARDS *****/
+
+.input-error {
+  outline: 1px solid red;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
