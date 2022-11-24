@@ -1,4 +1,5 @@
 const planets = [
+	{ name: 'Sun', gravity: 27.9, image: 'Sun.png' },
 	{ name: 'Mercury', gravity: 0.378, image: 'Mercury.png' },
 	{ name: 'Venus', gravity: 0.907, image: 'Venus.png' },
 	{ name: 'Earth', gravity: 1, image: 'Earth.png' },

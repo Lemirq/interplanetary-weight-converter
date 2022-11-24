@@ -51,7 +51,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(./images/dario-bronnimann-hNQwIirOseE-unsplash.jpg) center no-repeat;
+  background: url(./images/desktop.jpg) center no-repeat;
   background-size: cover;
 }
 
@@ -105,7 +105,7 @@ nav {
 /***** Main *****/
 #wrapper {
   margin: 0 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -136,7 +136,7 @@ h1 {
 
   font-size: 20px;
   padding: 10px 20px;
-  background-color: rgba(217, 217, 217, 0.2);
+  background-color: rgba(217, 217, 217, 0.5);
   font-family: var(--f-body);
   min-width: 280px;
 }
@@ -144,7 +144,7 @@ h1 {
 .btn-form {
   font-size: 20px;
   padding: 5px;
-  background-color: rgba(217, 217, 217, 0.2);
+  background-color: rgba(217, 217, 217, 0.5);
   border: none;
   transition: var(--trans-ease-in-out);
   cursor: pointer;
@@ -286,5 +286,25 @@ h1 {
 
   .card {
     width: 100%;
+  }
+}
+
+[src="./images/planets/Sun.png"]{
+  animation: glow 1s ease-in-out infinite alternate, rotate 7s linear infinite;
+}
+
+@keyframes glow {
+  from {
+  filter: drop-shadow(0px 0px 40px #D97951);
+}
+to{
+    filter: drop-shadow(0px 0px 0px #D97951);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  body{
+  background: url(./images/mobile.png) center repeat-y;
+  background-size: contain;
   }
 }
